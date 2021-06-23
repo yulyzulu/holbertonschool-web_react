@@ -12,7 +12,7 @@ var __assign = (this && this.__assign) || function () {
 import * as CRUD from "./crud";
 var row = {
     firstName: 'Guillaume',
-    lastName: 'Salva'
+    lastName: 'Salva',
 };
 var newRowID = CRUD.insertRow(row);
 var updateRow = __assign(__assign({}, row), { age: 23 });
