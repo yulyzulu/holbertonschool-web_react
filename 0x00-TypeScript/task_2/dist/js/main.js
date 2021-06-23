@@ -12,6 +12,7 @@ var Director = /** @class */ (function () {
     };
     return Director;
 }());
+export { Director };
 var Teacher = /** @class */ (function () {
     function Teacher() {
     }
@@ -26,7 +27,8 @@ var Teacher = /** @class */ (function () {
     };
     return Teacher;
 }());
-function createEmployee(salary) {
+export { Teacher };
+export function createEmployee(salary) {
     if (typeof salary === "number" && salary < 500) {
         return new Teacher();
     }
