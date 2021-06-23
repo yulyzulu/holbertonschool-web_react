@@ -42,7 +42,7 @@ console.log(createEmployee('$500'));
 export function isDirector(employee) {
     return employee.workFromHome() === 'Working from home';
 }
-function executeWork(employee) {
+export function executeWork(employee) {
     if (isDirector(employee)) {
         return employee.workDirectorTasks();
     }
@@ -50,4 +50,14 @@ function executeWork(employee) {
         return employee.workTeacherTasks();
     }
 }
+export function teachClass(todayClass) {
+    if (todayClass === 'Math') {
+        return 'Teaching Math';
+    }
+    else {
+        return 'Teaching History';
+    }
+}
+console.log(teachClass('Math'));
+console.log(teachClass('History'));
 //# sourceMappingURL=main.js.map
