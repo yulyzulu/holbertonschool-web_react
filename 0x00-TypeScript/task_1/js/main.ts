@@ -34,13 +34,13 @@ interface printTeacherFunction {
     (firstName: string, lastName: string): string;
 }
 
-const printTeacher: printTeacherFunction = function(firstName: string, lastName: string): string {
+export const printTeacher: printTeacherFunction = function(firstName: string, lastName: string): string {
     return `${firstName.charAt(0)}. ${lastName}`;
 };
 
 console.log(printTeacher("John", "Doe"));
 
-interface studentClassInterfase {
+interface studentClassInterface {
     firstName: string;
     lastName: string;
     workOnHomework(): string;
@@ -48,10 +48,10 @@ interface studentClassInterfase {
 }
 
 interface studentConstructor {
-    new(firstName: string, lastName: string): studentClassInterfase;
+    new(firstName: string, lastName: string): studentClassInterface;
 }
 
-const StudentClass: studentConstructor = class StudentClass implements studentClassInterfase {
+export const StudentClass: studentConstructor = class StudentClass implements studentClassInterface {
     firstName: string;
     lastName: string;
 
@@ -59,9 +59,11 @@ const StudentClass: studentConstructor = class StudentClass implements studentCl
         this.firstName = firstName;
         this.lastName = lastName;
     }
+
     workOnHomework(): string {
         return 'Currently working';
     }
+
     displayName(): string {
         return this.firstName;
     }
