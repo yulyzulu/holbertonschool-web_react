@@ -1,3 +1,4 @@
+/// <reference path="./crud.d.ts" />
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -15,7 +16,7 @@ var row = {
     lastName: 'Salva',
 };
 var newRowID = CRUD.insertRow(row);
-var updateRow = __assign(__assign({}, row), { age: 23 });
-CRUD.updateRow(newRowID, updateRow);
+var updatedRow = __assign(__assign({}, row), { age: 23 });
+CRUD.updateRow(newRowID, updatedRow);
 CRUD.deleteRow(newRowID);
 //# sourceMappingURL=main.js.map
