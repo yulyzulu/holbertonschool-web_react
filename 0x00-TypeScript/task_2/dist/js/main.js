@@ -54,7 +54,7 @@ export function teachClass(todayClass) {
     if (todayClass === 'Math') {
         return 'Teaching Math';
     }
-    else {
+    else if (todayClass === 'History') {
         return 'Teaching History';
     }
 }
