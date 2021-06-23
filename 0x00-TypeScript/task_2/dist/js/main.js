@@ -39,4 +39,15 @@ export function createEmployee(salary) {
 console.log(createEmployee(200));
 console.log(createEmployee(1000));
 console.log(createEmployee('$500'));
+export function isDirector(employee) {
+    return employee.workFromHome() === 'Working from home';
+}
+function executeWork(employee) {
+    if (isDirector(employee)) {
+        return employee.workDirectorTasks();
+    }
+    else {
+        return employee.workTeacherTasks();
+    }
+}
 //# sourceMappingURL=main.js.map

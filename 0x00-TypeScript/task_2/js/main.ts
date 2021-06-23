@@ -45,3 +45,15 @@ export function createEmployee(salary: number | string): Teacher | Director {
 console.log(createEmployee(200));
 console.log(createEmployee(1000));
 console.log(createEmployee('$500'));
+
+export function isDirector(employee: DirectorInterface | TeacherInterface): employee is Director {
+  return employee.workFromHome() === 'Working from home';
+}
+
+export function executeWork(employee: DirectorInterface | TeacherInterface): string {
+  if (isDirector(employee)) {
+    return employee.workDirectorTasks();
+  } else {
+    return employee.workTeacherTasks();
+  }
+}
