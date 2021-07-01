@@ -1,0 +1,25 @@
+
+.App-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #e0344b;
+}
+
+.App-logo {
+    width: 15%;
+}
+
+.App-body {
+    height: 400px;
+}
+
+hr {
+    background-color: #e0344b;
+    border: none;
+    height: 2px;
+}
+
+.App-footer {
+    text-align: center;
+}
