@@ -1,0 +1,32 @@
+:root {
+    --holbi-color: #e0344b;
+}
+
+.App-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--holbi-color);
+}
+
+.App-logo {
+    width: 15%;
+}
+
+.App-body {
+    height: 400px;
+}
+.App-body input {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+hr {
+    background-color: var(--holbi-color);
+    border: none;
+    height: 2px;
+}
+
+.App-footer {
+    text-align: center;
+}
