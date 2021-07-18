@@ -1,0 +1,16 @@
+:root {
+    --holbi-color: #e0344b;
+}
+
+div .Notifications {
+    border: 1px dashed var(--holbi-color);
+    padding: 3px;
+}
+
+[data-priority="default"] {
+    color: blue;
+}
+
+[data-priority="urgent"] {
+    color: red;
+}
