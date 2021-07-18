@@ -13,7 +13,7 @@ function App() {
         <Header /><hr />
       </div>
         <div className="App-body">
-          <Login /><hr />
+          <Login />
         </div>
         <div className="App-footer">
           <Footer />
