@@ -5,7 +5,7 @@ import Header from '../Header/Header.js';
 import Login from '../Login/Login.js';
 import Footer from '../Footer/Footer.js';
 import CourseList from '../CourseList/CourseList';
-import Proptypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { getLatestNotification } from '../utils/utils';
 
 class App extends React.Component {
@@ -33,8 +33,9 @@ class App extends React.Component {
           html: { __html: getLatestNotification() },
         },
       ]
-    }
-  }
+    };
+  };
+
   render() {
     return (
       <React.Fragment>
@@ -57,10 +58,10 @@ class App extends React.Component {
 
 App.defaultProps = {
   isLoggedIn: false,
-}
+};
 
 App.propTypes = {
-  isLoggedIn: Proptypes.bool,
+  isLoggedIn: PropTypes.bool,
 };
 
 export default App;
