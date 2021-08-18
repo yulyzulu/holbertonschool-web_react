@@ -14,7 +14,7 @@ NotificationItem.defaultProps = {
   type: 'default',
   value: '',
   html: {},
-  markAsRead: (() => {}),
+  markAsRead: () => {},
   id: 0
 };
 
