@@ -1,0 +1,10 @@
+:root {
+    --holbi-color: #e0344b;
+}
+
+hr {
+    background-color: var(--holbi-color);
+    border: none;
+    height: 2px;
+}
+
