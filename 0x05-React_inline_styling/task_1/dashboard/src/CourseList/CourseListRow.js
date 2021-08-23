@@ -1,4 +1,5 @@
 import React from 'react';
+import './CourseList.css';
 import Proptypes, { number } from 'prop-types';
 
 function CourseListRow({ isHeader, id, textFirstCell, textSecondCell }) {
