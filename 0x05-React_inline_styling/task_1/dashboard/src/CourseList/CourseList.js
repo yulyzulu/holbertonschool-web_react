@@ -30,9 +30,9 @@ function CourseList({ listCourses }) {
 const styles = StyleSheet.create({
   courseList: {
     width: '90%',
-    margin: 15,
-    marginLeft: 50,
-    borderWidth: 1,
+    margin: '15px',
+    marginLeft: '50px',
+    borderWidth: '1px',
     borderStyle: 'solid',
     borderColor: 'gray',
     borderCollapse: 'collapse'

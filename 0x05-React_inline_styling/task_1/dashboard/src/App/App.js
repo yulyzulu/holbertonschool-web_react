@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   hrColor: {
     backgroundColor: '#e0344b',
     border: 'none',
-    height: 2
+    height: '2px'
   }
 });
 
