@@ -1,8 +1,0 @@
-#CourseList th[colspan="2"], th {
-  text-align: center;
-  border-bottom: 1px solid gray;
-}
-
-#CourseList th {
-  text-align: left;
-}
