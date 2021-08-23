@@ -1,5 +1,4 @@
 import React from 'react';
-import './Notifications.css';
 import PropTypes from 'prop-types';
 import NotificationItemShape from './NotificationItemShape';
 import NotificationItem from './NotificationItem';
@@ -25,7 +24,7 @@ class Notifications extends React.Component {
   render() {
     return (
         <>
-            <div className="menuItem">
+            <div className={css(styles.menuItem)}>
                 Your notifications
             </div>
             { this.props.displayDrawer &&
@@ -70,10 +69,13 @@ class Notifications extends React.Component {
 const styles = StyleSheet.create({
   notifications: {
       float: 'right',
-      borderWidth: 1,
+      borderWidth: '1px',
       borderStyle: 'dashed',
       borderColor: '#e0344b',
-      padding: 3
+      padding: '3px'
+  },
+  menuItem: {
+    textAlign: 'right'
   }
 });
 

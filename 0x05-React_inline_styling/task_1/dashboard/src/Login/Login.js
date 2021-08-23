@@ -18,11 +18,11 @@ function Login() {
 
 const styles = StyleSheet.create({
   appBody: {
-    height: 350
+    height: '350px'
   },
   inputLogin: {
-    marginLeft: 4,
-    marginRight: 4
+    marginLeft: '4px',
+    marginRight: '4px'
   }
 });
 
