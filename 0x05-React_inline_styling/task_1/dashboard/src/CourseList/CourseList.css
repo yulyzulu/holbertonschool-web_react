@@ -1,17 +1,8 @@
-#CourseList {
-  width: 90%;
-  margin: 15px;
-  margin-left: 50px;
-  border: 1px solid gray;
-  border-collapse: collapse;
-}
-
-#CourseList th[colspan="2"] {
+#CourseList th[colspan="2"], th {
   text-align: center;
   border-bottom: 1px solid gray;
 }
 
 #CourseList th {
   text-align: left;
-  border-bottom: 1px solid gray;
 }

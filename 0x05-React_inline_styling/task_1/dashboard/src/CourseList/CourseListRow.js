@@ -4,6 +4,9 @@ import Proptypes, { number } from 'prop-types';
 function CourseListRow({ isHeader, id, textFirstCell, textSecondCell }) {
   // console.log(textFirstCell);
   let cell;
+  const styleBodyRow = { backgroundColor: '#deb5b545' };
+  const styleHeaderRow = { backgroundColor: '#f5f5f5ab' };
+
   if (isHeader) {
     if (!textSecondCell)  {
       cell = <th colSpan="2" >{textFirstCell}</th>;
@@ -16,13 +19,9 @@ function CourseListRow({ isHeader, id, textFirstCell, textSecondCell }) {
 
   let styleRow;
   if (isHeader) {
-    styleRow = {
-      backgroundColor: '#deb5b545'
-    };
+    styleRow = styleHeaderRow;
   } else {
-    styleRow = {
-      backgroundColor: '#f5f5f5ab'
-    }
+    styleRow = styleBodyRow;
   }
   return (
     <tr key={id} style={styleRow} >{cell}</tr>

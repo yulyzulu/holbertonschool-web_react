@@ -2,6 +2,15 @@ import React from 'react';
 import BodySectionWithMarginBottom from './BodySectionWithMarginBottom';
 
 import { shallow } from 'enzyme';
+import { StyleSheetTestUtils } from 'aphrodite';
+
+beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+});
+
+afterEach(() => {
+    StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
+});
 
 describe('<BodySectionWithMarginBottom /> test', () => {
   it('Should render without crashing', () => {

@@ -5,8 +5,16 @@
 import React from 'react';
 import WithLogging from './WithLogging';
 import Login from '../Login/Login';
-
 import { shallow, mount } from 'enzyme';
+import { StyleSheetTestUtils } from 'aphrodite';
+
+beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+});
+
+afterEach(() => {
+    StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
+});
 
 describe('<WithLogging /> test', () => {
   it('Should make sure console.log was called on mount and on unmount with Component when the wrapped element is pure html', () => {

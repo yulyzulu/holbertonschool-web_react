@@ -1,13 +1,3 @@
-:root {
-    --holbi-color: #e0344b;
-}
-
-div .Notifications {
-    float: right;
-    border: 1px dashed var(--holbi-color);
-    padding: 3px;
-}
-
 [data-notification-type="default"] {
     color: blue;
 }

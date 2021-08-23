@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Notifications from '../Notifications/Notifications.js';
 import Header from '../Header/Header.js';
 import Login from '../Login/Login.js';
@@ -9,6 +8,7 @@ import PropTypes from 'prop-types';
 import { getLatestNotification } from '../utils/utils';
 import BodySectionWithMarginBottom from '../BodySection/BodySectionWithMarginBottom';
 import BodySection from '../BodySection/BodySection';
+import { StyleSheet, css } from 'aphrodite';
 
 class App extends React.Component {
   constructor(props) {
@@ -61,7 +61,7 @@ class App extends React.Component {
       <React.Fragment>
         <Notifications listNotifications={this.state.listNotifications} />
         <div className="App">
-          <Header /><hr />
+          <Header /><hr className={css(styles.hrColor)} />
         </div>
           <div className="App-body">
             {
@@ -85,6 +85,14 @@ class App extends React.Component {
     );
   }
 }
+
+const styles = StyleSheet.create({
+  hrColor: {
+    backgroundColor: '#e0344b',
+    border: 'none',
+    height: 2
+  }
+});
 
 App.defaultProps = {
   isLoggedIn: false,

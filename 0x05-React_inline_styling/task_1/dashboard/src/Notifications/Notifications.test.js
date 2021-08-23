@@ -2,6 +2,15 @@ import React from 'react';
 import Notifications from './Notifications';
 import { shallow } from 'enzyme';
 import { getLatestNotification } from '../utils/utils';
+import { StyleSheetTestUtils } from 'aphrodite';
+
+beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+});
+
+afterEach(() => {
+    StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
+});
 
 describe('<Notifications /> test', () => {
   it('Should render without crashing', () => {
