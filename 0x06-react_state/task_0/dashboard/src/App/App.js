@@ -44,9 +44,7 @@ class App extends React.Component {
   };
 
   handleDisplayDrawer() {
-    console.log('LLega')
     this.setState({ displayDrawer: true });
-    //console.log(this.state.displayDrawer)
   }
   handleHideDrawer() {
     this.setState({ displayDrawer: false });

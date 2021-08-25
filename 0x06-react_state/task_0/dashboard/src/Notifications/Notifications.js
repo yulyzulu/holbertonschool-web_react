@@ -23,7 +23,6 @@ class Notifications extends React.Component {
   }
 
   render() {
-    console.log(this.props.displayDrawer)
     return (
       <>
         <div id="menuItem" className={css(styles.menuItem, styles.menuItemSmall)} onClick={this.props.handleDisplayDrawer}>
