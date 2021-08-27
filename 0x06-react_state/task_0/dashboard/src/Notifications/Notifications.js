@@ -23,27 +23,34 @@ class Notifications extends React.Component {
   }
 
   render() {
+    const {
+      displayDrawer,
+      listNotifications,
+      handleDisplayDrawer,
+      handleHideDrawer
+    } = this.props;
+
     return (
       <>
-        <div id="menuItem" className={css(styles.menuItem, styles.menuItemSmall)} onClick={this.props.handleDisplayDrawer}>
+        <div id="menuItem" className={css(styles.menuItem, styles.menuItemSmall)} onClick={handleDisplayDrawer}>
           {
-            !this.props.displayDrawer && 'Your notifications'
+            !displayDrawer && 'Your notifications'
           }
         </div>
-        { this.props.displayDrawer &&
+        { displayDrawer &&
           <div className={css(styles.notifications, styles.notificationSmall)}>
             <button
               id="closeButton"
               style={{float: 'right', background: 'transparent', border: 'white'}}
               aria-label="Close"
-              onClick={this.props.handleHideDrawer}
+              onClick={handleHideDrawer}
               >
               <img src={closeIcon} alt="close-icon" style={{width: '15px', marginRight: '10px' }} />
             </button>
             <p>Here is the list of notifications</p>
             <ul className={css(styles.ulStyle)}>
               {
-                this.props.listNotifications.length === 0 &&
+                listNotifications.length === 0 &&
                 (<NotificationItem
                     type="default"
                     value="No new notification for now"
@@ -51,7 +58,7 @@ class Notifications extends React.Component {
                 />)
               }
               {
-                this.props.listNotifications.map((notification) => (
+                listNotifications.map((notification) => (
                   <NotificationItem
                     key={notification.id}
                     type={notification.type}

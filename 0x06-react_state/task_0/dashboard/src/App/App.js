@@ -36,7 +36,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      displayDrawer: false,
+      displayDrawer: false
     };
     this.handleKeyboardKeys = this.handleKeyboardKeys.bind(this);
     this.handleDisplayDrawer = this.handleDisplayDrawer.bind(this);
@@ -69,7 +69,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <>
         <Notifications
           listNotifications={listNotifications}
           displayDrawer={this.state.displayDrawer}
@@ -97,7 +97,7 @@ class App extends React.Component {
           <div className="App-footer">
             <Footer />
           </div>
-      </React.Fragment>
+      </>
     );
   }
 }
