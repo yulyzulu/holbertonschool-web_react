@@ -68,11 +68,13 @@ class App extends React.Component {
   }
 
   render() {
+    const { displayDrawer } = this.state;
+    const { isLoggedIn } = this.props
     return (
       <>
         <Notifications
           listNotifications={listNotifications}
-          displayDrawer={this.state.displayDrawer}
+          displayDrawer={displayDrawer}
           handleDisplayDrawer={this.handleDisplayDrawer}
           handleHideDrawer={this.handleHideDrawer}
         />
@@ -81,7 +83,7 @@ class App extends React.Component {
         </div>
           <div className={css(styles.appBody)}>
             {
-              !this.props.isLoggedIn ?
+              !isLoggedIn ?
               <BodySectionWithMarginBottom title="Log in to continue">
                 <Login />
               </BodySectionWithMarginBottom>
